@@ -1,0 +1,18 @@
+collection_name: agent           #表名
+persist_directory: chroma_db
+#向量检索匹配几个结果
+k: 3
+#数据文件夹
+data_path: data
+#记录哪些MD5是已经被处理过的
+md5_hex_store: md5.text
+#允许哪些后缀名的文件可以加载到知识库中
+allow_knowledge_file_type: ["txt", "pdf"]
+
+#文本分割器
+#文本分割器分片的最大大小
+chunk_size: 200
+#连续两个分片之间可以有重叠的字符数
+chunk_overlap: 20
+#自然文本分段的常见分隔符
+separators: ["\n\n", "\n", ".", "!", "?", "。 ", "! ", "? ", " ", ""]
